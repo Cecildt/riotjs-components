@@ -26,52 +26,32 @@
 					<a class="pure-menu-heading" href="#">Components</a>
 					<ul class="pure-menu-list">
 						<li class="pure-menu-item">
-							<a href="#" class="pure-menu-link">Burger Menu</a>
+							<a href="#burger-menu" class="pure-menu-link">Burger Menu</a>
 						</li>
 						<li class="pure-menu-item">
-							<a href="#" class="pure-menu-link">Markdown Editor</a>
+							<a href="#markdown-editor" class="pure-menu-link">Markdown Editor</a>
 						</li>
 						<li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-							<a href="#" class="pure-menu-link">Pin Post</a>
+							<a href="#pin-post" class="pure-menu-link">Pin Post</a>
 						</li>
 						<li class="pure-menu-item">
-							<a href="#" class="pure-menu-link">Article Card</a>
+							<a href="#article-card" class="pure-menu-link">Article Card</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div id="main">
-				<div class="header">
-					<h1>RiotJS Components</h1>
-					<h2>Collection of compoments using RiotJS framework.</h2>
-				</div>
-				<div class="content">
-					<h2 class="content-subhead">Overview of Components</h2>					
-					<div class="pure-g">
-						<div class="pure-u-1-4">
-							<img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-						</div>
-						<div class="pure-u-1-4">
-							<img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-						</div>
-						<div class="pure-u-1-4">
-							<img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-						</div>
-						<div class="pure-u-1-4">
-							<img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
-						</div>
-					</div>
-				</div>
-				<markdown></markdown>
+			<div id="main">				
+				<app></app>
 			</div>
 		</div>
 		<script src="js/ui.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/markdown-it/4.2.1/markdown-it.min.js"></script>
-				
+								
 		<!-- include riot.js and components -->
 		<script src="//cdn.jsdelivr.net/g/riot@2.1(riot.min.js)"></script>
-		<script src="js/tags/markdown-editor.js"></script>
-		<script>riot.mount('*');</script>
+		<script src="js/tags/app.js"></script>
+		<script>
+			riot.mount('app');
+		</script>
 
 	</body>
 
