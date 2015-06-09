@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Cecildt/riotjs-components#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-serve": "^1.0.0"
+    "gulp-riot": "^0.2.15",
+    "gulp-serve": "^1.0.0",
+    "riot": "^2.1.0"
   }
 }
