@@ -15,6 +15,7 @@
 	        -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 	        padding: 0 20px;
+			min-height: 600px;
         }
         #editor textarea {
 	        border: none;
@@ -25,12 +26,15 @@
 	        font-size: 14px;
 	        font-family: 'Monaco', courier, monospace;
 	        padding: 20px;
+			height: 100%;
         }
 	</style>
+	
 	<div id="editor">
 		<textarea oninput={ edit }># hello</textarea>
 		<div name="resultdiv"></div>
 	</div>
+		
 	<script>
 		'use strict';
 		var md = window.markdownit();
