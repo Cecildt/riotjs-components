@@ -1,0 +1,26 @@
+{
+  "name": "riotjs-components",
+  "version": "1.0.0",
+  "description": "Collection of RiotJS Components",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cecildt/riotjs-components.git"
+  },
+  "keywords": [
+    "riotjs"
+  ],
+  "author": "Cecil du Toit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cecildt/riotjs-components/issues"
+  },
+  "homepage": "https://github.com/Cecildt/riotjs-components#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-serve": "^1.0.0"
+  }
+}
