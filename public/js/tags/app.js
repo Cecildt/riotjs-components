@@ -45,6 +45,12 @@ riot.tag('app', '<div class="header"><h1>RiotJS Components</h1><span class="sour
                 self.loadView('comment-box', { title: 'Comment Box' });
               });
 	      break
+        case 'share-bar':
+	      basket.require({ url: '/js/tags/share-bar.js', expire: 8 })
+              .then(function(){
+                self.loadView('share-bar', opts);
+              });
+	      break
 	    default:
 	      riot.route('/');
 	    }
