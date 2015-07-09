@@ -22,6 +22,9 @@
 			overflow: hidden;
 			text-decoration: none;
 		}
+		.left-social-menu a:hover {			
+			width: 64px;			
+		}
 		.menu-home{
 			background-color: #72898C;
 			color: #fff;		
@@ -35,19 +38,19 @@
 			color: #fff;		
 		}
 		.menu-linkedin{
-			background-color: #72898C;
+			background-color: #1D87BD;
 			color: #fff;		
 		}
 		.menu-facebook{
 			background-color: #305891;
 			color: #fff;		
 		}
-		.menu-onenote{
-			background-color: #975D93;
+		.menu-reddit{
+			background-color: #FF4500;
 			color: #fff;		
 		}
-		.menu-yammer{
-			background-color: #0471C6;
+		.menu-google{
+			background-color: #D73D32;
 			color: #fff;		
 		}
 		.menu-email{
@@ -58,39 +61,58 @@
 			background-color: #72898C;
 			color: #fff;		
 		}
+		.menu-close{
+			background-color: #72898C;
+			color: #fff;		
+		}
 	</style>
 	
-	<div class="left-social-menu">
-		<a href="#" class="menu-home" alt="Home">
+	<div id="left-share-menu" class="left-social-menu">
+		<a href="/" class="menu-home" alt="Home" title="View the home page.">
 			<span class="fa fa-home fa-lg"></span>
 		</a>
-		<a href="#" class="menu-share" alt="Share">
+		<a href="#" class="menu-share" alt="Share" title="Click on below items to share.">
 			<span>Share</span>
 		</a>
-		<a href="#" class="menu-twitter" alt="Twitter">
+		<a href="{ twitter }" class="menu-twitter" alt="Twitter" title="Share to Twitter." target="_blank">
 			<span class="fa fa-twitter fa-lg"></span>
 		</a>
-		<a href="#" class="menu-linkedin" alt="Linkedin">
+		<a href="{ linkedin }" class="menu-linkedin" alt="Linkedin" title="Share to Linkedin." target="_blank">
 			<span class="fa fa-linkedin fa-lg"></span>
 		</a>
-		<a href="#" class="menu-facebook" alt="Facebook">
+		<a href="{ facebook }" class="menu-facebook" alt="Facebook" title="Share to Facebook." target="_blank">
 			<span class="fa fa-facebook fa-lg"></span>
 		</a>
-		<a href="#" class="menu-onenote" alt="OneNote">
-			<img src="/img/share-onenote.png" alt="Share via OneNote">
+		<a href="{ reddit }" class="menu-reddit" alt="Reddit" title="Share to Reddit." target="_blank">
+			<span class="fa fa-reddit fa-lg"></span>
 		</a>
-		<a href="#" class="menu-yammer" alt="Yammer">
-			<img src="/img/share-yammer.png" alt="Share via Yammer">
+		<a href="{ google }" class="menu-google" alt="Google" title="Share to Google+." target="_blank">
+			<span class="fa fa-google-plus fa-lg"></span>
 		</a>
-		<a href="#" class="menu-email" alt="Email">
+		<a href="{ email }" class="menu-email" alt="Email" title="Email this page." target="_blank">
 			<span class="fa fa-envelope-o fa-lg"></span>
 		</a>
-		<a href="#" class="menu-print" alt="Print">
+		<a href="#" class="menu-print" alt="Print" title="Print this page." target="_blank" onclick="window.print();">
 			<span class="fa fa-print fa-lg"></span>
+		</a>
+		<a href="#" class="menu-close" alt="Close" title="Close share menu" onclick="{ close }">
+			<span class="fa fa-times fa-lg"></span>
 		</a>
 	</div>
 	
 	<script>
+		this.twitter = "http://twitter.com/intent/tweet?text=Read this: " + document.title + "&url=" + window.location.href;
+		this.linkedin = "http://www.linkedin.com/shareArticle?mini=true&url=" + window.location.href;
+		this.facebook = "http://www.facebook.com/share.php?u=" + window.location.href;
+		this.reddit = "http://reddit.com/submit?url=" + window.location.href + "&title=" + document.title;
+		this.google = "https://plus.google.com/share?url=" + window.location.href;
+		this.email = "mailto:name@email.com?Subject=" + document.title + "&amp;body=" + window.location.href;
+		
+		close() {
+			var menu = document.getElementById("left-share-menu");
+			menu.style.display = "none";	
+		};
+		
 	</script>
-	
+		
 </share-bar>
