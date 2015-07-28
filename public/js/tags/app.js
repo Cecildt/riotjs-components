@@ -15,38 +15,37 @@ riot.tag('app', '<div class="header"><h1>RiotJS Components</h1><span class="sour
 	  self.appRouter = function(view, opts) {
 	    switch(view) {
 	    case 'markdown-editor':
-	      basket.require({ url: '/js/tags/markdown-editor.js', expire: 8, skipCache: true })
+        System.import('/js/tags/markdown-editor.js')	      
               .then(function(){
                 self.loadView('markdown', opts);
-              });
-	      
+              });                	      
 	      break
 	    case 'burger-menu':
-	      basket.require({ url: '/js/tags/burger-menu.js', expire: 8, skipCache: true })
+        System.import('/js/tags/burger-menu.js')
               .then(function(){
                 self.loadView('burger-menu', opts);
               });
 	      break
 	    case 'pin-post':
-	      basket.require({ url: '/js/tags/pin-post.js', expire: 8, skipCache: true })
+        System.import('/js/tags/pin-post.js')
               .then(function(){
                 self.loadView('pin-post', opts);
               });
 	      break
       case 'article-card':
-	      basket.require({ url: '/js/tags/article-card.js', expire: 8, skipCache: true })
+        System.import('/js/tags/article-card.js')
               .then(function(){
                 self.loadView('article-card', opts);
               });
 	      break
       case 'comments':
-	      basket.require({ url: '/js/tags/comments.js', expire: 8, skipCache: true })
+        System.import('/js/tags/comments.js')
               .then(function(){
                 self.loadView('comment-box', { title: 'Comment Box' });
               });
 	      break
-        case 'share-bar':
-	      basket.require({ url: '/js/tags/share-bar.js', expire: 8, skipCache: true })
+      case 'share-bar':
+        System.import('/js/tags/share-bar.js')
               .then(function(){
                 self.loadView('share-bar', opts);
               });

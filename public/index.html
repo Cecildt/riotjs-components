@@ -55,14 +55,37 @@
 		<script src="js/ui.js"></script>
 		
 		<!-- 3rd party libraries -->
-		<script src="js/libs/basket.full.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/markdown-it/4.2.1/markdown-it.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.js"></script>
 		
 		<!-- include riot.js and components -->
-		<script src="//cdn.jsdelivr.net/g/riot@2.2.1(riot.min.js)"></script>
-		<script src="js/tags/app.js"></script>
 		<script>
-			riot.mount('app');
+			System.config({
+				map: {
+					riot: "//cdn.jsdelivr.net/g/riot@2.2.1(riot.min.js)",
+					markdownit: "//cdnjs.cloudflare.com/ajax/libs/markdown-it/4.2.1/markdown-it.min.js",
+					app: "js/tags/app.js"
+				},
+				meta: {
+					"riot": {
+						format: "global"
+					},
+					"markdownit":{
+						format: "global"
+					},
+					"/js/tags/markdown-editor.js":{
+						deps: ["markdownit"]
+					},
+					"app": {
+						deps: ["riot"]
+					}
+				}
+			});
+			
+			System.import("app")
+		      .then(function(){
+				  riot.mount('app');
+			  });	
+							
 		</script>
 	</body>
 
