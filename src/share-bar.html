@@ -65,14 +65,16 @@
 			background-color: #72898C;
 			color: #fff;		
 		}
+		@media only screen and (max-width: 500px) {
+			.left-social-menu {
+				display: none;
+			}
+		}
 	</style>
 	
 	<div id="left-share-menu" class="left-social-menu">
 		<a href="/" class="menu-home" alt="Home" title="View the home page.">
 			<span class="fa fa-home fa-lg"></span>
-		</a>
-		<a href="#" class="menu-share" alt="Share" title="Click on below items to share.">
-			<span>Share</span>
 		</a>
 		<a href="{ twitter }" class="menu-twitter" alt="Twitter" title="Share to Twitter." target="_blank">
 			<span class="fa fa-twitter fa-lg"></span>
