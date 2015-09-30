@@ -1,4 +1,5 @@
 (function (window, document) {
+    'use strict';
 
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),

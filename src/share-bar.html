@@ -103,6 +103,7 @@
 	</div>
 	
 	<script>
+		'use strict';
 		this.twitter = "http://twitter.com/intent/tweet?text=Read this: " + document.title + "&url=" + window.location.href;
 		this.linkedin = "http://www.linkedin.com/shareArticle?mini=true&url=" + window.location.href;
 		this.facebook = "http://www.facebook.com/share.php?u=" + window.location.href;
@@ -113,7 +114,7 @@
 		function close() {
 			var menu = document.getElementById("left-share-menu");
 			menu.style.display = "none";	
-		};
+		}
 		
 	</script>
 		

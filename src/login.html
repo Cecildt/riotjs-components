@@ -1,16 +1,15 @@
 <script>
 	'use strict';
 	// Login API
-	var auth = riot.observable()
+	var auth = riot.observable();
 	
 	auth.login = function(params) {
 	  $.get('/api', params, function(json) {
-	    auth.trigger('login', json)
-	  })
+	    auth.trigger('login', json);
+	  });
 	}
 </script>
 
-<!-- login view -->
 <login>
 	<form onsubmit="{ login }">
 		<input name="username" type="text" placeholder="username">
@@ -19,10 +18,10 @@
 	<script>
 		'use strict';
 			this.login = function() {
-			this.opts.login({
-			  username: this.username.value,
-			  password: this.password.value
-			});
+				this.opts.login({
+					username: this.username.value,
+					password: this.password.value
+				});
 			};
 	
 	  // any tag on the system can listen to login event
