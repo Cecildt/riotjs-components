@@ -23,11 +23,7 @@ riot.tag('login', '<form onsubmit="{ login }"><input name="username" type="text"
 	  this.opts.on('login', function() {
 
 	  });
+
 	
 });
 
-<!--
-riot.tag('body', '<login></login>', function(opts) {riot.mount('login', auth)
-});
-
--->

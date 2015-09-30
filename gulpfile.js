@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var serve = require('gulp-serve');
 var riot = require('gulp-riot');
+var eslint = require('gulp-eslint');
  
 gulp.task('serve', serve({
 	root: ['public'],
@@ -20,4 +21,11 @@ gulp.task('riot', function(){
 
 gulp.task('watch', function(){
 	gulp.watch('src/*.html', ['riot']);
+});
+
+gulp.task('lint', function () {
+    return gulp.src(['public/js/**/*.js']) 
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
 });

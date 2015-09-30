@@ -53,7 +53,7 @@ riot.tag('app', '<div class="header"><h1>RiotJS Components</h1><span class="sour
 	    default:
 	      riot.route('/');
 	    }
-	  }
+	  };
 	  
 	  riot.route(self.appRouter);
 	  
