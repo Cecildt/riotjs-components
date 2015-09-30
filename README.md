@@ -1,6 +1,9 @@
 # riotjs-components
 RiotJS Components Gallery
 
+[![bitHound Score](https://www.bithound.io/github/Cecildt/riotjs-components/badges/score.svg)](https://www.bithound.io/github/Cecildt/riotjs-components)
+[![bitHound Dependencies](https://www.bithound.io/github/Cecildt/riotjs-components/badges/dependencies.svg)](https://www.bithound.io/github/Cecildt/riotjs-components/master/dependencies/npm)
+
 ## Install dependencies
 First obtain all external references, packages & type definitions by running the following command:
 
