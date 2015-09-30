@@ -19,37 +19,37 @@ riot.tag('app', '<div class="header"><h1>RiotJS Components</h1><span class="sour
               .then(function(){
                 self.loadView('markdown', opts);
               });                	      
-	      break
+	      break;
 	    case 'burger-menu':
         System.import('/js/tags/burger-menu.js')
               .then(function(){
                 self.loadView('burger-menu', opts);
               });
-	      break
+	      break;
 	    case 'pin-post':
         System.import('/js/tags/pin-post.js')
               .then(function(){
                 self.loadView('pin-post', opts);
               });
-	      break
+	      break;
       case 'article-card':
         System.import('/js/tags/article-card.js')
               .then(function(){
                 self.loadView('article-card', opts);
               });
-	      break
+	      break;
       case 'comments':
         System.import('/js/tags/comments.js')
               .then(function(){
                 self.loadView('comment-box', { title: 'Comment Box' });
               });
-	      break
+	      break;
       case 'share-bar':
         System.import('/js/tags/share-bar.js')
               .then(function(){
                 self.loadView('share-bar', opts);
               });
-	      break
+	      break;
 	    default:
 	      riot.route('/');
 	    }

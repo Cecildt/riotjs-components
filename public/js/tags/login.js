@@ -1,5 +1,6 @@
 riot.tag('script', '', function(opts) {
-	'use strict';
+	'use strict';
+
 	var auth = riot.observable()
 	
 	auth.login = function(params) {
@@ -18,8 +19,10 @@ riot.tag('login', '<form onsubmit="{ login }"><input name="username" type="text"
 			  username: this.username.value,
 			  password: this.password.value
 			});
-			};
-	  this.opts.on('login', function() {
+			};
+
+	  this.opts.on('login', function() {
+
 	  });
 	
 });

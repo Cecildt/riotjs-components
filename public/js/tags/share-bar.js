@@ -6,10 +6,10 @@ riot.tag('share-bar', '<div id="left-share-menu" class="left-social-menu"><a hre
 		this.google = "https://plus.google.com/share?url=" + window.location.href;
 		this.email = "mailto:name@email.com?Subject=" + document.title + "&amp;body=" + window.location.href;
 		
-		this.close = function() {
+		function close() {
 			var menu = document.getElementById("left-share-menu");
 			menu.style.display = "none";	
-		}.bind(this);
+		};
 		
 	
 });
